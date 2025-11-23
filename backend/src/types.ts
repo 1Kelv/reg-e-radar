@@ -1,34 +1,39 @@
 // src/types.ts
 
-export type RegEStatus = 'APPLIES' | 'DOES_NOT_APPLY' | 'NEEDS_REVIEW';
+// How we store the Reg E outcome in the backend
+export type RegEStatus = 'MEETS_REG_E' | 'DOES_NOT_APPLY' | 'NEEDS_REVIEW';
 
-// One dispute row coming from Zazu / Checkout after cleaning
+// One dispute row coming from the frontend / Zazu / Checkout
 export interface DisputeRow {
-  arn: string;                // ARN from Checkout
-  customerName: string;       // Name from the chargeback form if available
+  arn: string;                 // ARN from Checkout
+  customerName: string;        // Name from the chargeback form if available
 
-  country: string;            // e.g. "US"
-  isUSConsumer: boolean;      // explicit tick / derived flag
+  country: string;             // e.g. "US"
+  isUSConsumer: boolean;       // tickbox
 
-  disputeReason: string;      // e.g. "Fraud / unauthorised"
-  isUnauthorised: boolean;    // fraud/unauthorised tick
+  // Reason + fraud flag
+  disputeReason: string;       // e.g. "Fraud / unauthorised"
+  isFraudOrUnauthorised: boolean;
 
-  isCardOrEft: boolean;       // card-based or EFT tick
+  // Card / EFT flag
+  isCardOrEFT: boolean;        // card-based or EFT tick
 
-  transactionDate: string;    // ISO string "2025-11-01"
-  disputeDate: string;        // ISO string "2025-11-20"
+  // Dates
+  transactionDate: string;     // "2025-11-01"
+  disputeDate: string;         // "2025-11-20"
 
-  // Reg E checklist checkboxes:
-  has3ds: boolean;            // 3DS authentication
-  avsMatch: boolean | null;   // AVS check (true/false/null)
-  ipDeviceMatch: boolean | null; // IP/device match
-  aniMatch: boolean | null;   // ANI result
-  kycCompleted: boolean;      // KYC status
+  // Checklist flags
+  has3DS: boolean;             // 3DS authentication present
+  avsMatch: boolean;           // AVS match
+  ipDeviceMatch: boolean;      // IP/device match
+  aniMatch: boolean;           // ANI result
+  kycStatus: string;           // raw KYC status text (passed, verified, pending…)
 }
 
+// Output of the Reg E classifier
 export interface ClassifiedDispute extends DisputeRow {
   regEStatus: RegEStatus;
-  reasons: string[];      // why it applied / didn’t
+  reasons: string[];     // why it applied / didn’t
   internalNote: string;
   checkoutNote: string;
 }

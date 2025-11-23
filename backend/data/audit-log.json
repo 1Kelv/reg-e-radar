@@ -43,5 +43,38 @@
     "transactionDate": "2025-11-18",
     "disputeDate": "2025-11-21",
     "createdAt": "2025-11-23T15:04:46.681Z"
+  },
+  {
+    "arn": "24388865323154806870278",
+    "customerName": "Delor Magellan Kamseu Kamgaing",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "canceled recurring",
+    "transactionDate": "2025-11-18",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T15:31:39.376Z"
+  },
+  {
+    "arn": "24388865323154806870278",
+    "customerName": "Delor Magellan Kamseu Kamgaing",
+    "disputeReason": "canceled recurring",
+    "transactionDate": "2025-11-18",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T15:51:29.797Z"
+  },
+  {
+    "arn": "24388865323154806870278",
+    "customerName": "Delor Magellan Kamseu Kamgaing",
+    "disputeReason": "canceled recurring",
+    "transactionDate": "2025-11-18",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T15:56:15.053Z"
+  },
+  {
+    "arn": "24388865323154806870278",
+    "customerName": "Delor Magellan Kamseu Kamgaing",
+    "disputeReason": "canceled recurring",
+    "transactionDate": "2025-11-18",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T16:01:36.802Z"
   }
 ]

@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { useState, useEffect, type ChangeEvent, type FormEvent } from 'react';
 import './App.css';
 
 type DisputeForm = {
@@ -29,7 +29,7 @@ type ClassifiedDispute = {
 
 const initialForm: DisputeForm = {
   arn: '',
-  customerName: 'Jane Smith',
+  customerName: '',
   country: 'US',
   isUSConsumer: true,
   isCardOrEFT: true,
@@ -49,6 +49,15 @@ function App() {
   const [result, setResult] = useState<ClassifiedDispute | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    return saved ? saved === 'dark' : true;
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
 
   const handleTextChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -127,14 +136,40 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>RegE Radar</h1>
-        <p className="subtitle">
-          Quick checker for Checkout chargebacks – one dispute at a time.
-        </p>
+        <div className="header-content">
+          <div>
+            <h1>RegE Radar</h1>
+            <p className="subtitle">
+              Quick checker for Checkout chargebacks, one dispute at a time.
+            </p>
+          </div>
+          <button
+            className="theme-toggle"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            aria-label="Toggle theme"
+          >
+            {isDarkMode ? (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+            ) : (
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            )}
+          </button>
+        </div>
       </header>
 
       <main className="layout">
-        {/* Left card – form */}
         <section className="card">
           <h2>Dispute details</h2>
 
@@ -159,6 +194,7 @@ function App() {
                   id="customerName"
                   name="customerName"
                   type="text"
+                  placeholder="Jane Smith"
                   value={form.customerName}
                   onChange={handleTextChange}
                   required
@@ -179,6 +215,7 @@ function App() {
                   <option value="KE">KE</option>
                   <option value="TZ">TZ</option>
                   <option value="UG">UG</option>
+                  <option value="GH">GH</option>
                 </select>
               </div>
 
@@ -330,7 +367,6 @@ function App() {
           </form>
         </section>
 
-        {/* Right card – result */}
         <section className="card">
           <h2>Result</h2>
 
