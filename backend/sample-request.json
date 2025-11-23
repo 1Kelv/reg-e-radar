@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "arn": "123456789012345678",
+      "customerName": "Jane Smith",
+      "country": "US",
+      "isUSConsumer": true,
+      "isCardOrEFT": true,
+      "isFraudOrUnauthorised": true,
+      "has3DS": true,
+      "ipDeviceMatch": true,
+      "avsMatch": true,
+      "aniMatch": true,
+      "kycStatus": "passed",
+      "disputeReason": "Fraud",
+      "transactionDate": "2025-08-10",
+      "disputeDate": "2025-08-12"
+    }
+  ]
+}
