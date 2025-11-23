@@ -40,6 +40,13 @@
   --card-accent: linear-gradient(90deg, transparent, #38bdf8, #22d3ee, transparent);
   --note-block-bg: rgba(30, 41, 59, 0.3);
   --note-block-border: rgba(71, 85, 105, 0.5);
+  
+  --help-icon-bg: rgba(15, 23, 42, 0.8);
+  --help-icon-border: #475569;
+  --help-icon-text: #94a3b8;
+  --help-icon-hover-bg: rgba(56, 189, 248, 0.15);
+  --help-icon-hover-border: #38bdf8;
+  --help-icon-hover-text: #e0f2fe;
 }
 
 /* Light mode */
@@ -80,6 +87,13 @@
   --card-accent: linear-gradient(90deg, transparent, #0284c7, #0891b2, transparent);
   --note-block-bg: #f1f5f9;
   --note-block-border: #cbd5e1;
+  
+  --help-icon-bg: #f1f5f9;
+  --help-icon-border: #cbd5e1;
+  --help-icon-text: #64748b;
+  --help-icon-hover-bg: #e0f2fe;
+  --help-icon-hover-border: #0284c7;
+  --help-icon-hover-text: #0c4a6e;
 }
 
 body {
@@ -306,6 +320,23 @@ select {
   letter-spacing: 0.01em;
 }
 
+/* Fix calendar icon visibility in light mode */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+:root[data-theme='light'] input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+  opacity: 0.5;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: .9;
+}
+
 input::placeholder,
 textarea::placeholder {
   color: var(--input-placeholder);
@@ -367,6 +398,31 @@ legend {
   border-radius: 0.5rem;
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+.help-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--help-icon-border);
+  color: var(--help-icon-text);
+  cursor: help;
+  background: var(--help-icon-bg);
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.help-icon:hover {
+  border-color: var(--help-icon-hover-border);
+  color: var(--help-icon-hover-text);
+  background: var(--help-icon-hover-bg);
+  transform: scale(1.1);
 }
 
 .checkbox:hover {

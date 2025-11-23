@@ -280,7 +280,9 @@ function App() {
                     checked={form.isUSConsumer}
                     onChange={handleCheckboxChange}
                   />
-                  <span>US-based consumer</span>
+                  <span>US-based consumer
+                    <span className="help-icon" title="Customer is an individual with an account held at a US bank (not a business or non-US account).">ℹ️</span>
+                  </span>
                 </label>
 
                 <label className="checkbox">
@@ -290,7 +292,11 @@ function App() {
                     checked={form.isCardOrEFT}
                     onChange={handleCheckboxChange}
                   />
-                  <span>Card-based transaction or EFT</span>
+                  <span>Card-based transaction or EFT
+                    <span className="help-icon" title="EFT means Electronic Funds Transfer, a fund from a US consumer bank account via debit card, ATM, or ACH/bank transfer..">ℹ️</span>
+
+                  </span>
+                
                 </label>
 
                 <label className="checkbox">
@@ -300,7 +306,9 @@ function App() {
                     checked={form.isFraudOrUnauthorised}
                     onChange={handleCheckboxChange}
                   />
-                  <span>Fraud / unauthorised dispute</span>
+                  <span>Fraud / unauthorised dispute
+                    <span className="help-icon" title="Dispute is marked as fraud or unauthorised by the customer, (not a goods/services or quality complaint)">ℹ️</span>
+                  </span>
                 </label>
 
                 <label className="checkbox">
@@ -310,7 +318,9 @@ function App() {
                     checked={form.has3DS}
                     onChange={handleCheckboxChange}
                   />
-                  <span>3DS authentication present</span>
+                  <span>3DS authentication present
+                    <span className="help-icon" title="Transaction used 3D Secure / SCA (e.g. OTP or challenge screen) and the issuer approved the authentication.">ℹ️</span>
+                  </span>
                 </label>
 
                 <label className="checkbox">
@@ -320,7 +330,9 @@ function App() {
                     checked={form.ipDeviceMatch}
                     onChange={handleCheckboxChange}
                   />
-                  <span>IP / device match</span>
+                  <span>IP / device match
+                    <span className="help-icon" title="The IP address and/or device used for the transaction matches the customer’s usual location/device.">ℹ️</span>
+                  </span>
                 </label>
 
                 <label className="checkbox">
@@ -330,7 +342,9 @@ function App() {
                     checked={form.avsMatch}
                     onChange={handleCheckboxChange}
                   />
-                  <span>AVS match</span>
+                  <span>AVS match
+                    <span className="help-icon" title="Billing address details (e.g. street and ZIP/postcode) matched the bank’s records at authorisation.">ℹ️</span>
+                  </span>
                 </label>
 
                 <label className="checkbox">
@@ -340,7 +354,9 @@ function App() {
                     checked={form.aniMatch}
                     onChange={handleCheckboxChange}
                   />
-                  <span>ANI match</span>
+                  <span>ANI match
+                    <span className="help-icon" title="The phone number used for the transaction matches the customer’s usual phone number on file.">ℹ️</span>
+                  </span>
                 </label>
               </fieldset>
 

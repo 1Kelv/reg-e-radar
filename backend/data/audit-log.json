@@ -76,5 +76,59 @@
     "transactionDate": "2025-11-18",
     "disputeDate": "2025-11-21",
     "createdAt": "2025-11-23T16:01:36.802Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T17:45:13.745Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T17:53:03.334Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T17:53:21.745Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T18:13:42.713Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T18:25:26.394Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin ",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-23T20:37:42.838Z"
   }
 ]

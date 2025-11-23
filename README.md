@@ -22,19 +22,20 @@ It is designed to reduce mental load during case review, standardise decisions, 
 
 ---
 
-## Tech stack
+## 🧱 Tech Stack
 
-**Backend**
+| Layer        | Technology              | Purpose                                                                 |
+|-------------|-------------------------|-------------------------------------------------------------------------|
+| Frontend    | React + TypeScript      | SPA UI for entering dispute details and viewing Reg E classification.   |
+|             | Vite                    | Frontend build + dev server for fast HMR and bundling.                  |
+|             | Plain CSS               | Custom styling for the dashboard, dark/light mode, and status pills.    |
+| Backend     | Node.js                 | Runtime for the API and Reg E classification logic.                     |
+|             | Express                 | HTTP server exposing `/api/classify` and `/api/history` endpoints.      |
+|             | TypeScript              | Shared types and safer backend logic for disputes + audit entries.      |
+| Data layer  | JSON file storage       | Simple `audit-log.json` file used as a lightweight audit history store. |
+| Tooling     | npm                     | Dependency management and scripts (`npm run dev`, `npm run build`, etc).|
+|             | Git + GitHub            | Version control and remote repository for RegE Radar.                   |
 
-- Node.js + TypeScript  
-- Express  
-- Simple JSON file store for the audit log  
-
-**Frontend**
-
-- React + TypeScript (Vite)  
-- CSS only (no component library)  
-- Dark-mode first UI, responsive layout
 
 ---
 
