@@ -192,7 +192,7 @@ Roadmap ideas
 
 Some potential next steps:
 
-🌗 Dark / light mode toggle for people who prefer light mode.
+🌗 Dark / light mode toggle for people who prefer light mode.  ✅
 
 📥 CSV upload:
 
