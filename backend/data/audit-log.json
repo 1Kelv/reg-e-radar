@@ -139,5 +139,122 @@
     "transactionDate": "2025-08-29",
     "disputeDate": "2025-11-21",
     "createdAt": "2025-11-24T09:08:32.922Z"
+  },
+  {
+    "arn": "24388865241118608020175",
+    "customerName": "Richard Dunn Austin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-08-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T10:08:51.333Z"
+  },
+  {
+    "arn": "24388865302145069826929",
+    "customerName": "Aron Richard Kastell",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T11:33:33.706Z"
+  },
+  {
+    "arn": "24388865302145069826929",
+    "customerName": "Aron Richard Kastell",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T11:40:37.548Z"
+  },
+  {
+    "arn": "24388865302145069826929",
+    "customerName": "Aron Richard Kastell",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T12:12:19.276Z"
+  },
+  {
+    "arn": "24388865302145069826929",
+    "customerName": "Aron Richard Kastell",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T12:12:25.028Z"
+  },
+  {
+    "arn": "24388865302145069826929",
+    "customerName": "Aron Richard Kastell",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T12:16:01.893Z"
+  },
+  {
+    "arn": "24388865302145069826929",
+    "customerName": "Aron Richard Kastell",
+    "regEStatus": "MEETS_REG_E",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-29",
+    "disputeDate": "2025-11-21",
+    "createdAt": "2025-11-24T12:16:06.659Z"
+  },
+  {
+    "arn": "24388865313150421079339",
+    "customerName": "Josiane Yepmo Simo",
+    "regEStatus": "APPLIES",
+    "disputeReason": "\nProduct/Service not received",
+    "transactionDate": "2025-11-09",
+    "disputeDate": "2025-11-18",
+    "createdAt": "2025-11-24T13:18:22.711Z"
+  },
+  {
+    "arn": "24388865313150421079339",
+    "customerName": "Josiane Yepmo Simo",
+    "regEStatus": "APPLIES",
+    "disputeReason": "\nProduct/Service not received",
+    "transactionDate": "2025-11-09",
+    "disputeDate": "2025-11-18",
+    "createdAt": "2025-11-24T13:34:20.803Z"
+  },
+  {
+    "arn": "24388865313150421079339",
+    "customerName": "Josiane Yepmo Simo",
+    "regEStatus": "APPLIES",
+    "disputeReason": "\nProduct/Service not received",
+    "transactionDate": "2025-11-09",
+    "disputeDate": "2025-11-18",
+    "createdAt": "2025-11-24T14:01:44.311Z"
+  },
+  {
+    "arn": "24388865313150421079339",
+    "customerName": "Josiane Yepmo Simo",
+    "regEStatus": "APPLIES",
+    "disputeReason": "\nProduct/Service not received",
+    "transactionDate": "2025-11-09",
+    "disputeDate": "2025-11-18",
+    "createdAt": "2025-11-24T14:01:48.618Z"
+  },
+  {
+    "arn": "24388865313150421079339",
+    "customerName": "Josiane Yepmo Simo",
+    "regEStatus": "APPLIES",
+    "disputeReason": "\nProduct/Service not received",
+    "transactionDate": "2025-11-09",
+    "disputeDate": "2025-11-18",
+    "createdAt": "2025-11-24T14:09:18.736Z"
+  },
+  {
+    "arn": "24388865313150421079339",
+    "customerName": "Josiane Yepmo Simo",
+    "regEStatus": "APPLIES",
+    "disputeReason": "\nProduct/Service not received",
+    "transactionDate": "2025-11-09",
+    "disputeDate": "2025-11-18",
+    "createdAt": "2025-11-24T14:09:46.299Z"
   }
 ]

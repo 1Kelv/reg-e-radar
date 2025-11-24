@@ -21,7 +21,7 @@ type DisputeForm = {
 type ClassifiedDispute = {
   arn: string;
   customerName: string;
-  regStatus: 'MEETS_REG_E' | 'DOES_NOT_APPLY' | string;
+  regEStatus: 'APPLIES' | 'DOES_NOT_APPLY' | 'NEEDS_REVIEW';
   reasons: string[];
   internalNote?: string;
   checkoutNote?: string;
@@ -131,7 +131,7 @@ function App() {
     }
   };
 
-  const isMeetsRegE = result?.regStatus === 'MEETS_REG_E';
+  const isMeetsRegE = result?.regEStatus === 'APPLIES';
 
   return (
     <div className="app">
@@ -140,7 +140,7 @@ function App() {
           <div>
             <h1>RegE Radar</h1>
             <p className="subtitle">
-              Quick checker for Checkout chargebacks, one dispute at a time.
+              A quick internal checker aligned with Reg E to help us classify Checkout chargebacks and draft consistent notes
             </p>
           </div>
           <button
@@ -293,7 +293,7 @@ function App() {
                     onChange={handleCheckboxChange}
                   />
                   <span>Card-based transaction or EFT
-                    <span className="help-icon" title="EFT means Electronic Funds Transfer, a fund from a US consumer bank account via debit card, ATM, or ACH/bank transfer..">ℹ️</span>
+                    <span className="help-icon" title="EFT means Electronic Funds Transfer – funds moving from a US consumer bank account via debit card, ATM, or ACH/bank transfer.">ℹ️</span>
 
                   </span>
                 
@@ -384,7 +384,7 @@ function App() {
         </section>
 
         <section className="card">
-          <h2>Result</h2>
+          <h2>Analysis Result</h2>
 
           {!result && !error && !isLoading && (
             <p className="muted">
