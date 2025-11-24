@@ -36,150 +36,155 @@ It is designed to reduce mental load during case review, standardise decisions, 
 | Tooling     | npm                     | Dependency management and scripts (`npm run dev`, `npm run build`, etc).|
 |             | Git + GitHub            | Version control and remote repository for RegE Radar.                   |
 
+# RegE Radar
+
+Quick checker for Checkout chargebacks – one dispute at a time.
+
+## Table of Contents
+- [How to Run the Project Locally](#how-to-run-the-project-locally)
+- [Prerequisites](#prerequisites)
+- [Installation & Setup](#installation--setup)
+- [Using RegE Radar](#using-rege-radar)
+- [Audit History](#audit-history)
 
 ---
 
-## Project structure
+## How to Run the Project Locally
 
-```text
-reg-e-radar/
-  backend/
-    src/
-      server.ts       # Express API
-      regelogic.ts    # Reg E rule logic
-      auditStore.ts   # Simple JSON audit log writer
-      types.ts        # Shared TypeScript types
-    data/
-      audit-log.json  # Appended audit entries
-    package.json
-    tsconfig.json
+### Prerequisites
 
-  frontend/
-    src/
-      App.tsx         # Main React app / form + result view
-      App.css         # Styling
-      main.tsx
-    index.html
-    package.json
-    tsconfig.json
-    vite.config.ts
+- **Node.js** (v18+ recommended)
+- **npm** (comes with Node)
+- **Git**
 
-Getting started
-Prerequisites
+---
 
-Node.js 18+ (Node 20 recommended)
+### Installation & Setup
 
-npm
-
-Clone the repository:
+#### 1. Clone the Repository
+```bash
 git clone https://github.com/1Kelv/reg-e-radar.git
 cd reg-e-radar
+```
 
-Backend (API)
+#### 2. Start the Backend (API + Reg E Logic)
+
+Open your first terminal window:
+```bash
 cd backend
-npm install
-npm run dev
+npm install          # first time only
+npm run dev          # starts API on http://localhost:4000
+```
 
-That will start the Express server on http://localhost:4000
- by default.
+> **Note:** Leave this terminal window open while you use the app.
 
-You can sanity-check it with:
-curl http://localhost:4000
+The backend exposes:
+- **POST** `/api/classify` – runs the Reg E check for a dispute
+- **GET** `/api/history` – returns the stored audit history
 
-Expected response:
-{ "message": "RegE Radar backend is running." }
+#### 3. Start the Frontend (React UI)
 
-Classify endpoint:
-POST /api/classify
-Content-Type: application/json
+Open a **second** terminal window:
+```bash
+cd reg-e-radar/frontend
+npm install          # first time only
+npm run dev          # starts UI, usually http://localhost:5173
+```
 
-Body format" {
-  "rows": [
-    {
-      "arn": "123456789012345678",
-      "customerName": "Jane Smith",
-      "country": "US",
-      "isUSConsumer": true,
-      "isCardOrEFT": true,
-      "isFraudOrUnauthorised": true,
-      "has3DS": true,
-      "ipDeviceMatch": true,
-      "avsMatch": true,
-      "aniMatch": true,
-      "kycStatus": "passed",
-      "disputeReason": "Fraud",
-      "transactionDate": "2025-08-10",
-      "disputeDate": "2025-08-12"
-    }
-  ]
-}
+---
 
-Example curl:
-curl -X POST http://localhost:4000/api/classify \
-  -H "Content-Type: application/json" \
-  -d @sample-request.json
+## Using RegE Radar
 
+1. **Open the app** in your browser using the URL shown in the frontend terminal (e.g., `http://localhost:5173`)
 
-Reason shape:
-{
-  "count": 1,
-  "results": [
-    {
-      "arn": "123456789012345678",
-      "customerName": "Jane Smith",
-      "regStatus": "MEETS_REG_E",
-      "reasons": ["..."],
-      "internalNote": "Country: US. dispute reason: Fraud ...",
-      "checkoutNote": "This dispute meets our internal criteria for Reg E ..."
-    }
-  ]
-}
+2. **Fill in the Dispute details** on the left side:
+   - ARN
+   - Customer name
+   - Transaction and dispute dates
+   - Checklist flags (US-based consumer, card/EFT, fraud, 3DS, etc.)
 
-Every call also appends a simplified entry to backend/data/audit-log.json.
+3. **Click "Run Reg E check"** to see:
+   - ✅ Reg E status (applies / does not apply / needs review)
+   - 📋 Reasoning bullets
+   - 📝 Internal note
+   - 📄 Checkout evidence note
 
-2. Frontend (React app)
+4. **Switch themes** using the ☀️ / 🌙 toggle in the header to switch between light and dark mode
 
-In a separate terminal:
-cd frontend
-npm install
-npm run dev
+5. **Copy the Checkout note** by clicking the "Copy note" button to paste it directly into the Checkout portal
 
-Vite will start the app on http://localhost:5173
-The frontend assumes the backend is available at http://localhost:4000. If you ever change the backend port, update the fetch URL in frontend/src/App.tsx.
+---
 
-Usage
+## Audit History
 
-Open http://localhost:5173 in your browser.
+Every time you run a check, the backend appends an entry to:
+```
+backend/data/audit-log.json
+```
 
-Fill in the dispute details:
+Each record includes:
+- ARN
+- Customer name
+- Reg E status
+- Dispute reason
+- Transaction and dispute dates
+- Timestamp
 
-ARN
+### Future Features
 
-Customer name
+This audit log will power upcoming features like:
+- 📊 A **History tab** in the UI
+- 📥 **CSV export** (e.g., "show me all Checkout Reg E chargebacks for last month")
 
-Country
+---
 
-Transaction date and dispute date
+## Tech Stack
 
-Free-text dispute reason
+**Frontend:**
+- React + TypeScript
+- Vite
 
-KYC status
+**Backend:**
+- Node.js + Express
+- Custom Reg E classification logic
 
-Checklist flags (US consumer, card/EFT, fraud/unauthorised, 3DS, IP/AVS/ANI matches)
+---
 
-Click Run Reg E check.
+## Project Structure
+```
+reg-e-radar/
+├── frontend/          # React UI
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── App.css
+│   │   └── ...
+│   └── package.json
+│
+├── backend/           # Express API
+│   ├── data/
+│   │   └── audit-log.json
+│   ├── src/
+│   │   └── ...
+│   └── package.json
+│
+└── README.md
+```
 
-Review the Result panel:
+---
 
-Status pill: Meets Reg E / Does not meet Reg E
+## Contributing
 
-Reasoning bullets
+This is an internal tool for NALA's Fraud Operations team. If you'd like to suggest improvements or report issues, please reach out to the team.
 
-Internal note
+---
 
-Checkout evidence note (with Copy note button)
+## License
 
-Live-use notes
+Internal use only - NALA FinTech
+
+---
+
+**Built with ❤️ by the NALA Fraud Ops Team**
 
 This version is an MVP intended to assist analysts, not to replace judgement or legal review.
 
