@@ -138,6 +138,49 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Logo and title styling */
+.title-wrapper {
+  flex: 1;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.3));
+  animation: pulse 120s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 6px 16px rgba(34, 211, 238, 0.5));
+  }
+}
+
+.logo-title h1 {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo-title {
+    gap: 0.75rem;
+  }
+}
 .app {
   max-width: 1400px;
   margin: 0 auto;

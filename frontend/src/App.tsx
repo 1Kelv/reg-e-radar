@@ -83,6 +83,9 @@ function App() {
     setError(null);
     setResult(null);
 
+    const start = Date.now();
+    const MIN_LOADING_MS = 500;
+
     try {
       const response = await fetch('http://localhost:4000/api/classify', {
         method: 'POST',
@@ -109,7 +112,14 @@ function App() {
           : 'Something went wrong while running the Reg E check.',
       );
     } finally {
-      setIsLoading(false);
+      const elapsed = Date.now() - start;
+      const remaining = MIN_LOADING_MS - elapsed;
+
+      if (remaining > 0) {
+        setTimeout(() => setIsLoading(false), remaining);
+      } else {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -137,10 +147,55 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="header-content">
-          <div>
-            <h1>RegE Radar</h1>
+          <div className="title-wrapper">
+            <div className="logo-title">
+              <svg className="logo" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Radar circles */}
+                <circle cx="24" cy="24" r="22" stroke="url(#gradient1)" strokeWidth="1.5" opacity="0.3"/>
+                <circle cx="24" cy="24" r="16" stroke="url(#gradient1)" strokeWidth="1.5" opacity="0.5"/>
+                <circle cx="24" cy="24" r="10" stroke="url(#gradient1)" strokeWidth="2" opacity="0.7"/>
+                
+                {/* Center dot */}
+                <circle cx="24" cy="24" r="2.5" fill="url(#gradient2)"/>
+                
+                {/* Scanning line (radar sweep) */}
+                <line x1="24" y1="24" x2="24" y2="4" stroke="url(#gradient2)" strokeWidth="2.5" strokeLinecap="round">
+                  <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="rotate"
+                    from="0 24 24"
+                    to="360 24 24"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+                
+                {/* Detection blips */}
+                <circle cx="32" cy="16" r="2" fill="#22d3ee" opacity="0.8">
+                  <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="16" cy="30" r="2" fill="#10b981" opacity="0.6">
+                  <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+                </circle>
+                
+                {/* Gradients */}
+                <defs>
+                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#38bdf8"/>
+                    <stop offset="50%" stopColor="#22d3ee"/>
+                    <stop offset="100%" stopColor="#10b981"/>
+                  </linearGradient>
+                  <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#22d3ee"/>
+                    <stop offset="100%" stopColor="#10b981"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h1>RegE Radar</h1>
+            </div>
             <p className="subtitle">
-              A quick internal checker aligned with Reg E to help us classify Checkout chargebacks and draft consistent notes
+              A quick internal checker aligned with <a href="https://www.consumerfinance.gov/rules-policy/regulations/1005/33/">Reg E</a> to classify Checkout chargebacks and draft consistent notes
             </p>
           </div>
           <button
@@ -294,9 +349,7 @@ function App() {
                   />
                   <span>Card-based transaction or EFT
                     <span className="help-icon" title="EFT means Electronic Funds Transfer – funds moving from a US consumer bank account via debit card, ATM, or ACH/bank transfer.">ℹ️</span>
-
                   </span>
-                
                 </label>
 
                 <label className="checkbox">
@@ -331,7 +384,7 @@ function App() {
                     onChange={handleCheckboxChange}
                   />
                   <span>IP / device match
-                    <span className="help-icon" title="The IP address and/or device used for the transaction matches the customer’s usual location/device.">ℹ️</span>
+                    <span className="help-icon" title="The IP address and/or device used for the transaction matches the customer's usual location/device.">ℹ️</span>
                   </span>
                 </label>
 
@@ -343,7 +396,7 @@ function App() {
                     onChange={handleCheckboxChange}
                   />
                   <span>AVS match
-                    <span className="help-icon" title="Billing address details (e.g. street and ZIP/postcode) matched the bank’s records at authorisation.">ℹ️</span>
+                    <span className="help-icon" title="Billing address details (e.g. street and ZIP/postcode) matched the bank's records at authorisation.">ℹ️</span>
                   </span>
                 </label>
 
@@ -355,7 +408,7 @@ function App() {
                     onChange={handleCheckboxChange}
                   />
                   <span>ANI match
-                    <span className="help-icon" title="The phone number used for the transaction matches the customer’s usual phone number on file.">ℹ️</span>
+                    <span className="help-icon" title="The phone number used for the transaction matches the customer's usual phone number on file.">ℹ️</span>
                   </span>
                 </label>
               </fieldset>
