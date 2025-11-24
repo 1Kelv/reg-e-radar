@@ -39,7 +39,7 @@ const initialForm: DisputeForm = {
   avsMatch: true,
   aniMatch: true,
   kycStatus: 'passed',
-  disputeReason: 'Fraud',
+  disputeReason: '',
   transactionDate: '',
   disputeDate: '',
 };
@@ -311,6 +311,7 @@ function App() {
                   <option value="verified">Verified</option>
                   <option value="pending">Pending / not done</option>
                   <option value="failed">Failed</option>
+                  <option value="Unknown">KYC Status Unknown</option>
                 </select>
               </div>
 
