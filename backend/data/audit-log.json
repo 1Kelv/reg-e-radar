@@ -256,5 +256,122 @@
     "transactionDate": "2025-11-09",
     "disputeDate": "2025-11-18",
     "createdAt": "2025-11-24T14:09:46.299Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Duplicate",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T14:20:43.722Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:05:59.354Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:06:12.036Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:06:17.068Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:06:28.932Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:24:35.730Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:24:57.954Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:25:04.329Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:25:10.778Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:30:35.758Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:30:48.519Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:31:32.259Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "APPLIES",
+    "disputeReason": "DUPLICATE",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-25T15:31:49.224Z"
   }
 ]

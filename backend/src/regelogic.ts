@@ -129,8 +129,8 @@ const internalNote = internalNoteParts.join('. ');
 // --- Checkout evidence note ----------------------------------
 const checkoutNote =
   regEStatus === 'APPLIES'
-    ? 'This dispute meets our internal criteria for Reg E. We are challenging the chargeback accordingly.'
-    : 'This dispute does not meet our internal criteria for Reg E, for example due to country, dispute reason or timing. We are providing this information for context and still challenging the chargeback where appropriate.';
+    ? 'This dispute meets our internal criteria for Regulation E. We are challenging the chargeback accordingly.'
+    : 'This dispute does not meet our internal criteria for Regulation E, for example due to country, dispute reason or timing. We are providing this information for context and still challenging the chargeback where appropriate.';
 
 
   return {

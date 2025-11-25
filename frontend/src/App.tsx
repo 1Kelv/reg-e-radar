@@ -195,7 +195,7 @@ function App() {
               <h1>RegE Radar</h1>
             </div>
             <p className="subtitle">
-              A quick internal checker aligned with <a href="https://www.consumerfinance.gov/rules-policy/regulations/1005/33/">Reg E</a> to classify Checkout chargebacks and draft consistent notes
+              A quick internal checker aligned with <a href="https://www.consumerfinance.gov/rules-policy/regulations/1005/33/">Regulation E</a> to classify Checkout chargebacks and draft consistent notes
             </p>
           </div>
           <button
@@ -257,23 +257,16 @@ function App() {
               </div>
 
               <div className="field">
-                <label htmlFor="country">Country</label>
-                <select
-                  id="country"
-                  name="country"
-                  value={form.country}
-                  onChange={handleTextChange}
-                >
-                  <option value="US">US</option>
-                  <option value="GB">GB</option>
-                  <option value="NG">NG</option>
-                  <option value="KE">KE</option>
-                  <option value="TZ">TZ</option>
-                  <option value="UG">UG</option>
-                  <option value="GH">GH</option>
-                </select>
+                <label htmlFor="country">Country (Must be USA)</label>
+                <input
+                name="country"
+                type="text"
+                value="United States"
+                disabled
+                style={{ cursor: 'not-allowed', opacity: 1.9 }}
+              />
               </div>
-
+             
               <div className="field">
                 <label htmlFor="transactionDate">Transaction date</label>
                 <input
@@ -442,7 +435,7 @@ function App() {
 
           {!result && !error && !isLoading && (
             <p className="muted">
-              Fill in the dispute details on the left and run the check to see the Reg E
+              Fill in the dispute details on the left and run the check to see the Regulation E
               outcome.
             </p>
           )}
@@ -492,6 +485,16 @@ function App() {
                 <div>
                   <h3>Internal note</h3>
                   <p>{result.internalNote}</p>
+                  <button
+                    type="button"
+                    className="secondary"
+                    onClick={() => {
+                      navigator.clipboard.writeText(result.internalNote || '');
+                      alert('Internal note copied to clipboard.');
+                    }}
+                  >
+                    Copy note
+                  </button>
                 </div>
               )}
 
@@ -507,6 +510,7 @@ function App() {
                     Copy note
                   </button>
                 </div>
+                
               )}
             </div>
           )}
