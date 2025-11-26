@@ -815,3 +815,68 @@ button.secondary:hover:not(:disabled) {
     align-self: flex-start;
   }
 }
+
+/* Floating "Back to top" button */
+.scroll-top-btn {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+
+  background: var(--bg-tertiary);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-primary);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-to-top {
+  position: fixed;
+  right: 1.5rem;  
+  bottom: 1.5rem;
+  z-index: 50;
+
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem; 
+
+  background: var(--bg-tertiary);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-primary);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all 0.13s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.scroll-to-top::before,
+.scroll-to-top::after {
+  display: none;
+}
+
+.scroll-to-top:hover {
+  background: var(--bg-quaternary);
+  border-color: var(--border-hover);
+  color: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

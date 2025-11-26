@@ -54,10 +54,22 @@ function App() {
     return saved ? saved === 'dark' : true;
   });
 
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
+
+//how/hide "Back to top" button when user scrolls
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 200); // show after ~200px scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleTextChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -140,6 +152,14 @@ function App() {
       alert('Could not copy note. You can still select and copy it manually.');
     }
   };
+
+    const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
 
   const isMeetsRegE = result?.regEStatus === 'APPLIES';
 
@@ -516,6 +536,15 @@ function App() {
           )}
         </section>
       </main>
+      {showScrollTop && (
+        <button
+          className="scroll-to-top"
+          onClick={handleScrollToTop}
+          aria-label="Scroll to top"
+        >
+          ↑ Top
+        </button>
+      )}
     </div>
   );
 }
