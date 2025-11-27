@@ -215,7 +215,7 @@ function App() {
               <h1>RegE Radar</h1>
             </div>
             <p className="subtitle">
-              A quick internal checker aligned with <a href="https://www.consumerfinance.gov/rules-policy/regulations/1005/33/">Regulation E</a> to classify Checkout chargebacks and draft consistent notes
+              A quick internal checker aligned with <a href="https://www.consumerfinance.gov/rules-policy/regulations/1005/33/">Regulation E (SubPart B)</a> to classify Checkout chargebacks and draft consistent notes
             </p>
           </div>
           <button

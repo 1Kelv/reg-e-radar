@@ -373,5 +373,41 @@
     "transactionDate": "2025-11-14",
     "disputeDate": "2025-11-24",
     "createdAt": "2025-11-25T15:31:49.224Z"
+  },
+  {
+    "arn": "24388865318152750535407",
+    "customerName": "Justina Uloma Otah",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Duplicate",
+    "transactionDate": "2025-11-14",
+    "disputeDate": "2025-11-24",
+    "createdAt": "2025-11-26T17:05:38.924Z"
+  },
+  {
+    "arn": "24388865265128631250856",
+    "customerName": "Shauna Michel Chauvin",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-09-22",
+    "disputeDate": "2025-09-30",
+    "createdAt": "2025-11-27T09:25:26.055Z"
+  },
+  {
+    "arn": "24388865265128631250856",
+    "customerName": "Shauna Michel Chauvin",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-09-22",
+    "disputeDate": "2025-09-30",
+    "createdAt": "2025-11-27T09:43:06.427Z"
+  },
+  {
+    "arn": "24388865265128631250856",
+    "customerName": "Shauna Michel Chauvin",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Duplicate",
+    "transactionDate": "2025-09-22",
+    "disputeDate": "2025-09-30",
+    "createdAt": "2025-11-27T09:43:24.112Z"
   }
 ]
