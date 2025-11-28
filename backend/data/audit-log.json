@@ -409,5 +409,14 @@
     "transactionDate": "2025-09-22",
     "disputeDate": "2025-09-30",
     "createdAt": "2025-11-27T09:43:24.112Z"
+  },
+  {
+    "arn": "24388865256124639872883",
+    "customerName": "Sarah-Jane C Mcmillen",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Duplicate",
+    "transactionDate": "2025-09-13",
+    "disputeDate": "2025-11-15",
+    "createdAt": "2025-11-28T10:30:51.684Z"
   }
 ]

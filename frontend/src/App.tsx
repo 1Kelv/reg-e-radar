@@ -329,10 +329,11 @@ function App() {
               </div>
 
               <div className="field field--full">
-                <label htmlFor="disputeReason">Dispute reason (free text)</label>
+                <label htmlFor="disputeReason">Dispute reason</label>
                 <textarea
                   id="disputeReason"
                   name="disputeReason"
+                  placeholder="Fraud, Duplicate, Product not received, etc."
                   rows={3}
                   value={form.disputeReason}
                   onChange={handleTextChange}
@@ -361,7 +362,7 @@ function App() {
                     checked={form.isCardOrEFT}
                     onChange={handleCheckboxChange}
                   />
-                  <span>Card-based transaction or EFT
+                  <span>Card-based transaction or EFT (Credit Cards not supported)
                     <span className="help-icon" title="EFT means Electronic Funds Transfer – funds moving from a US consumer bank account via debit card, ATM, or ACH/bank transfer.">ℹ️</span>
                   </span>
                 </label>
