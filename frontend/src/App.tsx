@@ -329,16 +329,26 @@ function App() {
               </div>
 
               <div className="field field--full">
-                <label htmlFor="disputeReason">Dispute reason</label>
-                <textarea
-                  id="disputeReason"
-                  name="disputeReason"
-                  placeholder="Fraud, Duplicate, Product not received, etc."
-                  rows={3}
-                  value={form.disputeReason}
-                  onChange={handleTextChange}
-                />
-              </div>
+  <label htmlFor="disputeReason">Dispute reason</label>
+  <select
+    id="disputeReason"
+    name="disputeReason"
+    value={form.disputeReason}
+    onChange={handleTextChange}
+    required
+  >
+    <option value="">Select dispute reason…</option>
+    <option value="Fraud / unauthorised">Fraud / unauthorised</option>
+    <option value="Duplicate transaction">Duplicate transaction</option>
+    <option value="Product not received">Product not received</option>
+    <option value="Services not received">Services not received</option>
+    <option value="Credit not issued / refund not received">
+      Credit not issued / refund not received
+    </option>
+    <option value="General / other">General / other</option>
+  </select>
+</div>
+
 
               <fieldset className="flags field--full">
                 <legend>Checklist flags</legend>

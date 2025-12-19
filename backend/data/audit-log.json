@@ -418,5 +418,122 @@
     "transactionDate": "2025-09-13",
     "disputeDate": "2025-11-15",
     "createdAt": "2025-11-28T10:30:51.684Z"
+  },
+  {
+    "arn": "24388865265128631048599",
+    "customerName": "Shauna Michel Chauvin",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-09-22",
+    "disputeDate": "2025-09-30",
+    "createdAt": "2025-11-28T13:49:01.655Z"
+  },
+  {
+    "arn": "24388865324155735677717",
+    "customerName": "Maribel M Abardo",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Product/Service not received",
+    "transactionDate": "2025-11-20",
+    "disputeDate": "2025-11-29",
+    "createdAt": "2025-12-01T10:40:18.604Z"
+  },
+  {
+    "arn": "24388865328157279729363",
+    "customerName": "ulia Ludovick Shirima",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Product/Service Not received",
+    "transactionDate": "2025-11-24",
+    "disputeDate": "2025-11-30",
+    "createdAt": "2025-12-01T12:34:54.980Z"
+  },
+  {
+    "arn": "24388865328157279729363",
+    "customerName": "Julia Ludovick Shirima",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Product/Service Not received",
+    "transactionDate": "2025-11-24",
+    "disputeDate": "2025-11-30",
+    "createdAt": "2025-12-01T13:01:32.245Z"
+  },
+  {
+    "arn": "24388865328157279729363",
+    "customerName": "Julia Ludovick Shirima",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Product/Service Not received",
+    "transactionDate": "2025-11-24",
+    "disputeDate": "2025-11-30",
+    "createdAt": "2025-12-01T13:05:05.758Z"
+  },
+  {
+    "arn": "24388865328157279729363",
+    "customerName": "Julia Ludovick Shirima",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Product/Service Not received",
+    "transactionDate": "2025-11-24",
+    "disputeDate": "2025-11-29",
+    "createdAt": "2025-12-01T14:25:00.083Z"
+  },
+  {
+    "arn": "24388865297142702977133",
+    "customerName": "Rehman Hayat",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Fraudulent",
+    "transactionDate": "2025-10-24",
+    "disputeDate": "2025-12-09",
+    "createdAt": "2025-12-10T10:40:27.389Z"
+  },
+  {
+    "arn": "24388865297142702977133",
+    "customerName": "Rehman Hayat",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-10-24",
+    "disputeDate": "2025-12-09",
+    "createdAt": "2025-12-15T17:22:34.894Z"
+  },
+  {
+    "arn": "02703405325155944457842",
+    "customerName": "Rachel Discutido Villaflor",
+    "regEStatus": "APPLIES",
+    "disputeReason": "General",
+    "transactionDate": "2025-11-21",
+    "disputeDate": "2025-12-17",
+    "createdAt": "2025-12-17T12:34:40.367Z"
+  },
+  {
+    "arn": "02703405325156219495418",
+    "customerName": "Rachel Discutido Villaflor",
+    "regEStatus": "APPLIES",
+    "disputeReason": "General",
+    "transactionDate": "2025-11-21",
+    "disputeDate": "2025-12-17",
+    "createdAt": "2025-12-18T09:47:26.413Z"
+  },
+  {
+    "arn": "02703405325156219495418",
+    "customerName": "Rachel Discutido Villaflor",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "General",
+    "transactionDate": "2025-11-21",
+    "disputeDate": "2025-12-17",
+    "createdAt": "2025-12-18T09:48:38.088Z"
+  },
+  {
+    "arn": "24388865343165008981149",
+    "customerName": "Jeremy M Santella",
+    "regEStatus": "APPLIES",
+    "disputeReason": "Fraud",
+    "transactionDate": "2025-12-09",
+    "disputeDate": "2025-12-18",
+    "createdAt": "2025-12-19T10:07:58.691Z"
+  },
+  {
+    "arn": "24388865309148439817134",
+    "customerName": "Priscilla Samaah",
+    "regEStatus": "DOES_NOT_APPLY",
+    "disputeReason": "Credit not issued",
+    "transactionDate": "2025-11-05",
+    "disputeDate": "2025-12-18",
+    "createdAt": "2025-12-19T10:13:40.272Z"
   }
 ]
